@@ -68,3 +68,27 @@ Without keys, React does not understand the order or uniqueness of each element.
 With keys, React has an idea of which particular element was deleted, edited, and added.
 Keys are generally used for displaying a list of data coming from an API.
 ***Note- Keys used within arrays should be unique among siblings. They need not be globally unique.
+
+6.What is JSX?
+JSX stands for JavaScript XML. It allows us to write HTML inside JavaScript and place them in the DOM without using functions like appendChild( ) or createElement( ).
+
+As stated in the official docs of React, JSX provides syntactic sugar for React.createElement( ) function.
+
+Note- We can create react applications without using JSX as well.
+
+Let’s understand how JSX works:
+
+Without using JSX, we would have to create an element by the following process:
+
+const text = React.createElement('p', {}, 'This is a text');
+const container = React.createElement('div','{}',text );
+ReactDOM.render(container,rootElement);
+Using JSX, the above code can be simplified:
+
+const container = (
+<div>
+  <p>This is a text</p>
+</div>
+);
+ReactDOM.render(container,rootElement);
+As one can see in the code above, we are directly using HTML inside JavaScript.
