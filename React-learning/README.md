@@ -21,3 +21,11 @@ Gentle learning curve: React has a gentle learning curve when compared to framew
 SEO friendly: React allows developers to develop engaging user interfaces that can be easily navigated in various search engines. It also allows server-side rendering, which boosts the SEO of an app.
 Reusable components: React uses component-based architecture for developing applications. Components are independent and reusable bits of code. These components can be shared across various applications having similar functionality. The re-use of components increases the pace of development.
 Huge ecosystem of libraries to choose from: React provides you with the freedom to choose the tools, libraries, and architecture for developing an application based on your requirement.
+
+3.What are the limitations of React?
+The few limitations of React are as given below:
+
+React is not a full-blown framework as it is only a library.
+The components of React are numerous and will take time to fully grasp the benefits of all.
+It might be difficult for beginner programmers to understand React.
+Coding might become complex as it will make use of inline templating and JSX.
