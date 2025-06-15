@@ -46,4 +46,25 @@ const setCount = () => {
 };
 We can make use of setCounter() method for updating the state of count anywhere. In this example, we are using setCounter() inside the setCount function where various other things can also be done. The idea with the usage of hooks is that we will be able to keep our code more functional and avoid class-based components if they are not required.
 
-5.
+5.What are keys in React?
+A key is a special string attribute that needs to be included when using lists of elements.
+
+
+Example of a list using key -
+
+const ids = [1,2,3,4,5];
+const listElements = ids.map((id)=>{
+return(
+<li key={id.toString()}>
+  {id}
+</li>
+)
+})
+Importance of keys -
+
+Keys help react identify which elements were added, changed or removed.
+Keys should be given to array elements for providing a unique identity for each element.
+Without keys, React does not understand the order or uniqueness of each element.
+With keys, React has an idea of which particular element was deleted, edited, and added.
+Keys are generally used for displaying a list of data coming from an API.
+***Note- Keys used within arrays should be unique among siblings. They need not be globally unique.
