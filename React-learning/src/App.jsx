@@ -9,7 +9,6 @@ const App = () => {
   return (
     <div>
       <Card />
-     
     
  
     </div>
