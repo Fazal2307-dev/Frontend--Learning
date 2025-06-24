@@ -16,7 +16,7 @@ function Card() {
             <div className='w-full px-3 py-4'>
                 <h2 className='font-semibold'>{elem.name}</h2>
                 <p className='text-xs mt-3'>{elem.description}</p>
-                <button className={` ${elem.instock ? "bg-sky-500 ":"bg-red-600"} text-zinc-100 mt-3 p-1 rounded`}>
+                <button  onClick={()=>{alert("Hey using Event Handling")}}  className={` ${elem.instock ? "bg-sky-500 ":"bg-red-600"} text-zinc-100 mt-3 p-1 rounded`}>
                   {elem.instock ? "In Stock" :"Out Of Stock"}
                 </button>
             </div>
