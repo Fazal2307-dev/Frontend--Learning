@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 
 function App() {
-  const[value,setValue]=useState(2);
+  const [val,setVal] = useState({name:"Fazal", isBanned:false});
   return (
-    <div>
-      <h2>{value}</h2>
-      <button  onClick={()=>setValue(prev=>prev+2)}  className='bg-yellow-400 m-3 p-2 rounded-full ov'>Twos Tables</button>
+    <div >
+      <h2>{val.name}</h2>
+      <h2>{val.isBanned .toString()}</h2>
+      <button   onClick={()=>setVal({...val, name:"Value change with the help of spred fn",isBanned:! val.isBanned})} className='bg-amber-300 rounded -full '>update value of object</button>
     </div>
   )
 }
