@@ -1,16 +1,11 @@
 import React, { useState } from 'react'
 
-
-
-const App = () => {
-
-  const [value,setValue]=useState(0)
-
+function App() {
+  const[value,setValue]=useState(2);
   return (
     <div>
-   <h2>{value}</h2>
-    <button onClick={()=>setValue(value+1)} className='bg-blue-400 rounded-full px-3 py-1 mt-2'>Add To Cart </button>
- 
+      <h2>{value}</h2>
+      <button  onClick={()=>setValue(prev=>prev+2)}  className='bg-yellow-400 m-3 p-2 rounded-full ov'>Twos Tables</button>
     </div>
   )
 }
