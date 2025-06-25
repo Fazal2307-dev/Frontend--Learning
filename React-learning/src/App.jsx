@@ -4,7 +4,7 @@ import Card from './Components/Card'
 
 const App = () => {
 
-  const Array = ["Fazal","Afzal","Sanya","ALiya"];
+ 
 
   return (
     <div>
