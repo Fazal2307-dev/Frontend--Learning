@@ -3,10 +3,14 @@ import React from 'react'
 function Navbar() {
   return (
     <div>
-      <ol className='bg-black text-blue-50 flex justify-center items-center gap-10'>
+      <ol className='bg-black text-blue-50 flex justify-center items-center gap-10 p-3'>
         <li>AMAZON.IN</li>
         <li>Location</li>
-        <li>Search bar</li>
+        <li>
+            <form>
+                <input  className='bg-amber-50'  type='text' name='' />
+            </form>
+        </li>
         <li>Country</li>
         <li>Account</li>
         <li>Reaturn & Order</li>
