@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
   return (
     <div>
-      <ol className=' flex justify-center items-center gap-10'>
+      <ol className='bg-black text-blue-50 flex justify-center items-center gap-10'>
         <li>AMAZON.IN</li>
         <li>Location</li>
         <li>Search bar</li>
