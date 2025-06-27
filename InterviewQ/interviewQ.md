@@ -95,3 +95,25 @@ function UncontrolledInput() {
 
   return <input ref={inputRef} />;
 }
+
+8. How would you optimize the performance of a React application?
+Answer:
+
+Code Splitting: Using React.lazy and Suspense.
+Memoization: Using React.memo, useMemo, and useCallback.
+Avoid unnecessary re-renders: Proper use of keys and preventing state mutation.
+Lazy Loading: Load components and data only when needed.
+const MemoizedComponent = React.memo(({ count }) => {
+  return <div>{count}</div>;
+});
+9. What is Prop Drilling, and how can it be avoided in React?
+Answer: Prop drilling occurs when data is passed through multiple components that don’t need it, just to reach a child component. This can be avoided by using the Context API or a state management library.
+
+// Avoiding prop drilling using Context API
+const UserContext = React.createContext();
+10. What is the significance of keys in React, and how do they work in lists?
+Answer: Keys help React identify which items in a list have changed, are added, or are removed, thus optimizing re-renders. Keys should be unique and stable.
+
+<ul>
+  {items.map(item => <li key={item.id}>{item.name}</li>)}
+</ul>
