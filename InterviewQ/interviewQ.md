@@ -33,3 +33,35 @@ function Counter() {
     </div>
   );
 }
+
+4. How do you manage state in React applications?
+Answer: State can be managed in several ways:
+
+Local State: Managed via useState.
+Global State: Managed using Context API or state management libraries like Redux or MobX.
+// Local state example:
+const [count, setCount] = useState(0);
+
+// Context API for global state:
+const AppContext = React.createContext();
+5. Explain the Context API and its typical use cases.
+Answer: The Context API provides a way to pass data through the component tree without passing props manually at every level. It’s useful for global data like user authentication, theme preferences, or language settings.
+
+const ThemeContext = React.createContext('light');
+
+function App() {
+  return (
+    <ThemeContext.Provider value="dark">
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+function Toolbar() {
+  return <ThemedButton />;
+}
+
+function ThemedButton() {
+  const theme = React.useContext(ThemeContext);
+  return <button className={theme}>Button</button>;
+}
