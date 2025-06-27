@@ -190,3 +190,48 @@ function Form() {
     </form>
   );
 }
+
+
+17. Explain React Router and how routing works in single-page applications.
+Answer: React Router is used to manage routing in React apps. It allows developers to build single-page applications (SPAs) that navigate between different views without full page reloads.
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/home" component={Home} />
+        <Route path="/about" component={About} />
+      </Switch>
+    </Router>
+  );
+}
+18. What is Redux, and how does it help manage state in large applications?
+Answer: Redux is a state management library that helps manage the application state in a predictable manner. It follows a unidirectional data flow model and stores the global state in a single source of truth (store).
+
+const store = createStore(reducer);
+
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { ...state, count: state.count + 1 };
+    default:
+      return state;
+  }
+}
+19. What is the difference between Redux and Context API?
+Answer:
+
+Redux is more suitable for complex state management and provides a more structured way to handle actions and state changes.
+Context API is simpler but might not scale well in very large applications with many layers of components.
+20. How would you handle asynchronous actions in Redux?
+Answer: Asynchronous actions are handled using middleware like Redux Thunk or Redux Saga.
+
+// Redux Thunk example:
+function fetchData() {
+  return async (dispatch) => {
+    const response = await fetch('url');
+    dispatch({ type: 'FETCH_SUCCESS', payload: response.data });
+  };
+}
