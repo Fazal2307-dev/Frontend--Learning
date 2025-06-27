@@ -143,3 +143,50 @@ Answer: React.memo is a higher-order component that prevents a functional compon
 const MyComponent = React.memo(({ name }) => {
   return <div>{name}</div>;
 });
+
+14. Can you explain the difference between functional and class components?
+Answer:
+
+Class Components have lifecycle methods and this keyword.
+Functional Components are simpler, use hooks like useState and useEffect, and are preferred in modern React development.
+// Class component example:
+class MyComponent extends React.Component {
+  state = { count: 0 };
+  render() {
+    return <div>{this.state.count}</div>;
+  }
+}
+
+// Functional component example:
+function MyComponent() {
+  const [count, setCount] = React.useState(0);
+  return <div>{count}</div>;
+}
+15. What are Fragments in React, and why are they useful?
+Answer: Fragments allow grouping multiple elements without adding extra nodes to the DOM, helping to avoid unnecessary wrapping elements like <div>.
+
+return (
+  <React.Fragment>
+    <h1>Title</h1>
+    <p>Paragraph</p>
+  </React.Fragment>
+);
+16. How would you handle form validation in React?
+Answer: Form validation can be handled manually or using libraries like Formik or React Hook Form.
+
+// Manual validation example:
+function Form() {
+  const [value, setValue] = React.useState('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (value === '') {
+      alert('Field is required');
+    }
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input value={value} onChange={(e) => setValue(e.target.value)} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
