@@ -117,3 +117,29 @@ Answer: Keys help React identify which items in a list have changed, are added, 
 <ul>
   {items.map(item => <li key={item.id}>{item.name}</li>)}
 </ul>
+
+
+11. How do you handle side effects in React components?
+Answer: Side effects such as data fetching or subscriptions are handled using the useEffect hook.
+
+useEffect(() => {
+  // Data fetching or subscription
+  return () => {
+    // Clean-up subscription if necessary
+  };
+}, []); // Empty dependency array to run only on mount
+12. What are Higher-Order Components (HOCs) in React, and when should you use them?
+Answer: HOCs are functions that take a component and return a new component, useful for reusing component logic.
+
+function withLoading(Component) {
+  return function LoadingWrapper(props) {
+    if (props.isLoading) return <div>Loading...</div>;
+    return <Component {...props} />;
+  };
+}
+13. What is React.memo, and how does it help with performance optimization?
+Answer: React.memo is a higher-order component that prevents a functional component from re-rendering if its props haven't changed.
+
+const MyComponent = React.memo(({ name }) => {
+  return <div>{name}</div>;
+});
