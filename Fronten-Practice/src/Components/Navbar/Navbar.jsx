@@ -8,7 +8,7 @@ function Navbar() {
         <li>Location</li>
         <li>
             <form>
-                <input  className='bg-amber-50 w-120'  type='text' name='' />
+                <input  className='bg-amber-50 w-120'  type='text' name='Search'  placeholder='search' required/>
             </form>
         </li>
         <li>Country</li>
