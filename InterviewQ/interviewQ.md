@@ -235,3 +235,22 @@ function fetchData() {
     dispatch({ type: 'FETCH_SUCCESS', payload: response.data });
   };
 }
+
+
+21. What is Server-Side Rendering (SSR) in React, and what are its benefits?
+Answer: SSR renders React components on the server and sends the fully rendered HTML to the client. It improves SEO and speeds up the initial load.
+
+22. Explain the concept of code splitting in React.
+Answer: Code splitting allows the app to load only the necessary JavaScript for the page being viewed, reducing the initial load time. This can be achieved with React.lazy and Suspense.
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OtherComponent />
+    </Suspense>
+  );
+}
+23. How does React handle accessibility (a11y)?
+Answer: React follows the same accessibility rules as regular HTML. You can use the aria- attributes to improve accessibility and also tools like the React A11y plugin to audit accessibility.
