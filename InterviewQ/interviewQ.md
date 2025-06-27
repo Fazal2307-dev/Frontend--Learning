@@ -254,3 +254,30 @@ function App() {
 }
 23. How does React handle accessibility (a11y)?
 Answer: React follows the same accessibility rules as regular HTML. You can use the aria- attributes to improve accessibility and also tools like the React A11y plugin to audit accessibility.
+
+24. What are error boundaries in React?
+Answer: Error boundaries are React components that catch JavaScript errors in their child component tree, log those errors, and display a fallback UI.
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+25. What is the difference between useEffect and useLayoutEffect?
+Answer:
+
+useEffect: Runs asynchronously after the render.
+useLayoutEffect: Runs synchronously after the DOM mutations but before the browser repaints.
