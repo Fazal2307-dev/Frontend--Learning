@@ -65,3 +65,33 @@ function ThemedButton() {
   const theme = React.useContext(ThemeContext);
   return <button className={theme}>Button</button>;
 }
+
+6. How does React’s component lifecycle work, and how has it changed with the introduction of hooks?
+Answer: Class components have lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount. Hooks such as useEffect replace these lifecycle methods in functional components.
+
+function Component() {
+  useEffect(() => {
+    // componentDidMount or componentDidUpdate logic
+    return () => {
+      // componentWillUnmount logic
+    };
+  }, []);
+}
+7. What are the differences between controlled and uncontrolled components in React?
+Answer:
+
+Controlled components rely on React state to manage form inputs.
+Uncontrolled components rely on the DOM and use refs for accessing values.
+// Controlled component example:
+function ControlledInput() {
+  const [value, setValue] = React.useState('');
+
+  return <input value={value} onChange={(e) => setValue(e.target.value)} />;
+}
+
+// Uncontrolled component example:
+function UncontrolledInput() {
+  const inputRef = React.useRef();
+
+  return <input ref={inputRef} />;
+}
