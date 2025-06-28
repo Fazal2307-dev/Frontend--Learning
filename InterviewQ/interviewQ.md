@@ -281,3 +281,16 @@ Answer:
 
 useEffect: Runs asynchronously after the render.
 useLayoutEffect: Runs synchronously after the DOM mutations but before the browser repaints.
+
+26. How do you handle code reusability in React?
+Answer: Code reusability in React is handled using:
+
+Higher-Order Components (HOCs)
+Custom Hooks
+Render Props
+27. How would you approach migrating a class-based component to a functional component with hooks?
+Answer:
+
+Identify the stateful logic and lifecycle methods.
+Replace state and setState with useState.
+Replace lifecycle methods (componentDidMount, componentDidUpdate, componentWillUnmount) with useEffect.
