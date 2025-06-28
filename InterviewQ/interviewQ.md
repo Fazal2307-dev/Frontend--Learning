@@ -294,3 +294,16 @@ Answer:
 Identify the stateful logic and lifecycle methods.
 Replace state and setState with useState.
 Replace lifecycle methods (componentDidMount, componentDidUpdate, componentWillUnmount) with useEffect.
+
+28. How does React handle security vulnerabilities like XSS attacks?
+Answer: React automatically escapes any values embedded in JSX before rendering them, preventing XSS attacks. However, using dangerouslySetInnerHTML can open your app to XSS vulnerabilities.
+
+const safeHTML = '<p>Safe HTML</p>';
+<div dangerouslySetInnerHTML={{ __html: safeHTML }} />;
+29. What are React portals, and when would you use them?
+Answer: Portals provide a way to render children into a DOM node outside the parent component hierarchy. Useful for modals, tooltips, etc.
+
+ReactDOM.createPortal(
+  <ModalContent />,
+  document.getElementById('modal-root')
+);
