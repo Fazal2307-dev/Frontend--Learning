@@ -307,3 +307,18 @@ ReactDOM.createPortal(
   <ModalContent />,
   document.getElementById('modal-root')
 );
+
+30. How do you handle testing in React applications?
+Answer: Testing in React is typically done using libraries like:
+
+Jest for unit testing.
+React Testing Library for testing components.
+Enzyme for testing component lifecycles and states.
+// Simple Jest test for a component:
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+Conclusion:
+Mastering these topics and being able to explain them concisely with practical examples will give you an edge in interviews for senior React.js web developer roles.
