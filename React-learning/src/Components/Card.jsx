@@ -14,6 +14,7 @@ function Card() {
          <h2>{item.age}</h2>
       </div>
       )}
+      <button  onClick={()=>setVal(()=>val.map(item=> item.name === "Afzal" ? ({name:"Afzal",age:18}) : item ))} className='bg-blue-400 rounded p-3 m-2'>Click me</button>
     </div>
   )
 }
