@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Card() {
-  const[val,setVal]=useState(0)
   return (
-    <div className='p-4'>
-      <p>You Travlled {val} Km </p>
-      <button  onClick={()=>{setVal(()=> val+1)}}  className='bg-blue-500 rounded m-4 p-2 text-amber-50'>Click me</button>
+    <div >
+      <div className='w-52 h-fit bg-amber-200'>
+        <img src="https://images.unsplash.com/photo-1747597197690-de29ae7d998e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <h1>Amazon.in</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, minima quam! Rem.</p>
+      </div>
     </div>
   )
 }
